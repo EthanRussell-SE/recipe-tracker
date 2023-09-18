@@ -23,8 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <RecipeCreate addRecipe={addRecipe} />
       <RecipeList recipes={recipes} deleteRecipe={deleteRecipe} />
+      <RecipeCreate addRecipe={addRecipe} />
+      
     </div>
   );
 }
