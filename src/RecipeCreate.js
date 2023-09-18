@@ -28,7 +28,7 @@ function RecipeCreate({ addRecipe }) {
   };
 
   return (
-    <div>
+    <div >
       <h2>Add New Recipe</h2>
       <form onSubmit={handleSubmit} name="create">
         <input
@@ -38,7 +38,7 @@ function RecipeCreate({ addRecipe }) {
           value={recipe.name}
           onChange={handleChange}
         />
-        <br/>
+        
         <input
           type="text"
           name="cuisine"
@@ -46,7 +46,7 @@ function RecipeCreate({ addRecipe }) {
           value={recipe.cuisine}
           onChange={handleChange}
         />
-        <br/>
+        
         <input
           type="text"
           name="photo"
@@ -54,14 +54,14 @@ function RecipeCreate({ addRecipe }) {
           value={recipe.photo}
           onChange={handleChange}
         />
-        <br/>
+        
         <textarea
           name="ingredients"
           placeholder="ingredients"
           value={recipe.ingredients}
           onChange={handleChange}
         />
-        <br/>
+        
         <textarea
           name="preparation"
           placeholder="preparation"
