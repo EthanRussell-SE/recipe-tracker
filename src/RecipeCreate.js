@@ -16,8 +16,12 @@ function RecipeCreate({ addRecipe }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+ if (!recipe.name || !recipe.cuisine || !recipe.photo || !recipe.ingredients || !recipe.preparation) {
+      alert("Please fill all boxes to create your recipe.");
+      return;
+    }
     addRecipe(recipe);
-
     setRecipe({
       name: '',
       cuisine: '',
@@ -27,50 +31,64 @@ function RecipeCreate({ addRecipe }) {
     });
   };
 
-  return (
-    <div >
-      <h2>Add New Recipe</h2>
-      <form onSubmit={handleSubmit} name="create">
-        <input
-          type="text"
-          name="name"
-          placeholder="name"
-          value={recipe.name}
-          onChange={handleChange}
-        />
-        
-        <input
-          type="text"
-          name="cuisine"
-          placeholder="cuisine"
-          value={recipe.cuisine}
-          onChange={handleChange}
-        />
-        
-        <input
-          type="text"
-          name="photo"
-          placeholder="photo URL"
-          value={recipe.photo}
-          onChange={handleChange}
-        />
-        
-        <textarea
-          name="ingredients"
-          placeholder="ingredients"
-          value={recipe.ingredients}
-          onChange={handleChange}
-        />
-        
-        <textarea
-          name="preparation"
-          placeholder="preparation"
-          value={recipe.preparation}
-          onChange={handleChange}
-        />
-        <button type="submit">Add Recipe</button>
-      </form>
-    </div>
+   return (
+    
+    <form onSubmit={handleSubmit} name="create">
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <table>
+        <tbody>
+          <tr>
+            <td >
+              <input style={{width: `70px`}}
+                name="name"
+                placeholder="Name"
+                value={recipe.name}
+                onChange={handleChange}
+                
+              />
+            </td>
+            <td>
+              <input style={{width: `70px`}}
+                name="cuisine"
+                placeholder="Cuisine"
+                value={recipe.cuisine}
+                onChange={handleChange}
+              />
+            </td>
+            <td>
+              <input style={{width: `523px`}}
+                name="photo"
+                placeholder="URL"
+                value={recipe.photo}
+                onChange={handleChange}
+              />
+            </td>
+            <td>
+              <textarea style={{width: `450px`}}
+                name="ingredients"
+                placeholder="Ingredients"
+                value={recipe.ingredients}
+                onChange={handleChange}
+                width=""
+              />
+            </td>
+            <td>
+              <textarea style={{width: `650px`}}
+                name="preparation"
+                placeholder="Preparation"
+                value={recipe.preparation}
+                onChange={handleChange}
+              />
+            </td>
+            <td>
+              <button  type="submit">Create</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+       </div>
+    </form>
+     
   );
 }
 
