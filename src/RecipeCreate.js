@@ -16,6 +16,11 @@ function RecipeCreate({ addRecipe }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (Object.values(recipe).some((value) => value.trim() === '')) {
+      alert('Please fill out all of the recipes information to create one!');
+      return;
+    }
     addRecipe(recipe);
 
     setRecipe({
@@ -89,3 +94,4 @@ function RecipeCreate({ addRecipe }) {
 }
 
 export default RecipeCreate;
+
