@@ -16,12 +16,8 @@ function RecipeCreate({ addRecipe }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
- if (!recipe.name || !recipe.cuisine || !recipe.photo || !recipe.ingredients || !recipe.preparation) {
-      alert("Please fill all boxes to create your recipe.");
-      return;
-    }
     addRecipe(recipe);
+
     setRecipe({
       name: '',
       cuisine: '',
@@ -31,11 +27,11 @@ function RecipeCreate({ addRecipe }) {
     });
   };
 
-   return (
+  return (
     
     <form onSubmit={handleSubmit} name="create">
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <table>
+      <div style={{backgroundColor: "#DEB887", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <tbody>
           <tr>
             <td >
@@ -85,8 +81,8 @@ function RecipeCreate({ addRecipe }) {
             </td>
           </tr>
         </tbody>
+        </div>
       </table>
-       </div>
     </form>
      
   );
