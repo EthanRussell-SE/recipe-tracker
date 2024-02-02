@@ -12,6 +12,7 @@ label {
 header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 html {
   font-family: 'helvetica neue', sans-serif;
 }
@@ -32,73 +33,20 @@ td {
   font-size: 12px;
   padding: 10px;
   text-align: center;
-  
+  color: violet;
 }
 
-/* table */
-
-table {
+table  {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   overflow:hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  
 }
+
 .content_td p {
   max-width: 100%;
   max-height: 100px;
   overflow-y: auto;
   text-overflow: ellipsis;
-}
-
-/* images */
-
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-}
-
-
-thead th {
-  width: 10%;
-}
-
-thead th:nth-child(4) {
-  width: 30%;
-}
-
-thead th:nth-child(5) {
-  width: 30%;
-}
-
-
-tbody tr:nth-child(odd) {
-  background-color: #fff0c7;
-}
-
-tbody tr td {
-  width: 10%;
-}
-
-tbody tr td:nth-child(4) {
-  width: 30%;
-}
-
-tbody tr td:nth-child(5) {
-  width: 30%;
-}
-
-input {
-  object-fit: scale-down;
-  width: 10%;
-}
-
-input {
-  width : 10%;
-}
-long-width {
-  width: 30%;
 }
